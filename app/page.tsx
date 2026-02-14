@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { Phone, MapPin, Clock, Star, ArrowRight, CheckCircle, Shield, Users, Car, Navigation, Menu, X, Calendar, Info, Image as ImageIcon } from 'lucide-react';
+import { Phone, MapPin, Clock, Star, ArrowRight, CheckCircle, Shield, Users, Car, Navigation, Menu, X, Calendar, Info } from 'lucide-react';
 
 export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -13,7 +13,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-5">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center space-x-2.5">
-              <div className="w-9 h-9 bg-gradient-to-br from-blue-600 to-blue-800 rounded-lg flex items-center justify-center shadow-sm">
+              <div className="w-9 h-9 bg-[#1e40af] rounded-lg flex items-center justify-center shadow-sm">
                 <span className="text-white font-semibold text-sm">A</span>
               </div>
               <div>
@@ -23,10 +23,11 @@ export default function Home() {
             </div>
             
             <div className="hidden md:flex items-center space-x-7">
-              <a href="#home" className="text-sm text-gray-600 hover:text-blue-600 transition">Beranda</a>
-              <a href="#routes" className="text-sm text-gray-600 hover:text-blue-600 transition">Rute</a>
-              <a href="#features" className="text-sm text-gray-600 hover:text-blue-600 transition">Layanan</a>
-              <a href="#contact" className="text-sm text-gray-600 hover:text-blue-600 transition">Kontak</a>
+              <a href="#home" className="text-sm text-gray-600 hover:text-[#1e40af] transition">Beranda</a>
+              <a href="#routes" className="text-sm text-gray-600 hover:text-[#1e40af] transition">Rute</a>
+              <a href="#features" className="text-sm text-gray-600 hover:text-[#1e40af] transition">Layanan</a>
+              <a href="#about" className="text-sm text-gray-600 hover:text-[#1e40af] transition">Tentang</a>
+              <a href="#contact" className="text-sm text-gray-600 hover:text-[#1e40af] transition">Kontak</a>
             </div>
 
             <div className="hidden md:flex items-center">
@@ -34,8 +35,7 @@ export default function Home() {
                 href="https://wa.me/6285290902690?text=Halo, saya ingin pesan travel..."
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition text-sm flex items
--center space-x-1.5 shadow-sm"
+                className="bg-[#1e40af] text-white px-4 py-2 rounded-lg hover:bg-[#1a3596] transition text-sm flex items-center space-x-1.5 shadow-sm"
               >
                 <Phone className="w-3.5 h-3.5" />
                 <span>Pesan</span>
@@ -53,15 +53,16 @@ export default function Home() {
 
         {mobileMenuOpen && (
           <div className="md:hidden bg-white border-t border-gray-100 px-5 py-4 space-y-2.5">
-            <a href="#home" className="block text-sm text-gray-600 hover:text-blue-600 transition py-1">Beranda</a>
-            <a href="#routes" className="block text-sm text-gray-600 hover:text-blue-600 transition py-1">Rute</a>
-            <a href="#features" className="block text-sm text-gray-600 hover:text-blue-600 transition py-1">Layanan</a>
-            <a href="#contact" className="block text-sm text-gray-600 hover:text-blue-600 transition py-1">Kontak</a>
+            <a href="#home" className="block text-sm text-gray-600 hover:text-[#1e40af] transition py-1">Beranda</a>
+            <a href="#routes" className="block text-sm text-gray-600 hover:text-[#1e40af] transition py-1">Rute</a>
+            <a href="#features" className="block text-sm text-gray-600 hover:text-[#1e40af] transition py-1">Layanan</a>
+            <a href="#about" className="block text-sm text-gray-600 hover:text-[#1e40af] transition py-1">Tentang</a>
+            <a href="#contact" className="block text-sm text-gray-600 hover:text-[#1e40af] transition py-1">Kontak</a>
             <a
               href="https://wa.me/6285290902690?text=Halo, saya ingin pesan travel..."
               target="_blank"
               rel="noopener noreferrer"
-              className="block bg-blue-600 text-white px-4 py-2 rounded-lg text-sm text-center mt-2"
+              className="block bg-[#1e40af] text-white px-4 py-2 rounded-lg text-sm text-center mt-2"
             >
               Pesan Travel
             </a>
@@ -74,7 +75,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-10 items-center">
             <div>
-              <div className="inline-flex items-center space-x-1.5 bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-[11px] mb-5">
+              <div className="inline-flex items-center space-x-1.5 bg-[#f0f9ff] text-[#1e40af] px-3 py-1 rounded-full text-[11px] mb-5">
                 <Star className="w-3 h-3 fill-current" />
                 <span>Melayani sejak 2015</span>
               </div>
@@ -82,12 +83,12 @@ export default function Home() {
                 Travel dari Banjarnegara ke Seluruh Jawa Tengah
               </h1>
               <p className="text-base text-gray-600 mb-6 leading-relaxed max-w-lg">
-                Kami jemput di alamat dan antar sampai tujuan. Armada Hiace, Avanza, dan Innova dengan driver berpengalaman.
+                Driver kami rata-rata memiliki pengalaman 5+ tahun. Kami kenal rute Banjarnegara - Semarang, Jogja, Solo, dan Jakarta dengan baik. Armada Hiace, Avanza, dan Innova yang terawat rutin.
               </p>
               <div className="flex flex-col sm:flex-row gap-2.5 mb-6">
                 <a
                   href="#routes"
-                  className="bg-blue-600 text-white px-5 py-2.5 rounded-lg hover:bg-blue-700 transition flex items-center justify-center space-x-1.5 text-sm font-medium shadow-sm"
+                  className="bg-[#1e40af] text-white px-5 py-2.5 rounded-lg hover:bg-[#1a3596] transition flex items-center justify-center space-x-1.5 text-sm font-medium shadow-sm"
                 >
                   <span>Lihat Jadwal</span>
                   <ArrowRight className="w-3.5 h-3.5" />
@@ -96,7 +97,7 @@ export default function Home() {
                   href="https://wa.me/6285290902690?text=Halo, saya ingin pesan travel..."
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-white text-blue-600 px-5 py-2.5 rounded-lg hover:bg-blue-50 transition border border-blue-200 text-sm font-medium"
+                  className="bg-white text-[#1e40af] px-5 py-2.5 rounded-lg hover:bg-[#f0f9ff] transition border border-[#1e40af] text-sm font-medium"
                 >
                   Chat WhatsApp
                 </a>
@@ -105,20 +106,20 @@ export default function Home() {
               {/* Testimonial */}
               <div className="bg-gray-50 rounded-xl p-4 border border-gray-100">
                 <div className="flex items-start space-x-3">
-                  <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
-                    <span className="text-blue-600 text-sm font-medium">B</span>
+                  <div className="w-10 h-10 bg-[[#f0f9ff] rounded-full flex items-center justify-center flex-shrink-0">
+                    <span className="text-[#1e40af] text-sm font-medium">B</span>
                   </div>
                   <div>
                     <div className="flex items-center space-x-1.5 mb-1">
                       <span className="text-sm font-medium text-gray-900">Budi Santoso</span>
                       <div className="flex space-x-0.5">
                         {[1, 2, 3, 4, 5].map(i => (
-                          <Star key={i} className="w-3 h-3 fill-yellow-400 text-yellow-400" />
+                          <Star key={i} className="w-3 h-3 fill-[#f97316] text-[#f97316]" />
                         ))}
                       </div>
                     </div>
                     <p className="text-xs text-gray-600 leading-relaxed">
-                      "Perjalanan Banjarnegara ke Semarang lancar. Driver ramah dan mobil bersih."
+                      "Perjalanan Banjarnegara ke Semarang tanggal 12 Jan 2026. Driver Pak Budi sangat ramah, mobil bersih dan AC dingin. Sangat puas!"
                     </p>
                   </div>
                 </div>
@@ -127,19 +128,19 @@ export default function Home() {
 
             {/* Hero Image */}
             <div className="relative">
-              <div className="rounded-2xl overflow-hidden shadow-xl">
+              <div className="rounded-2xl overflow-hidden shadow-lg">
                 <img
                   src="https://images.unsplash.com/photo-1549317661-bd319e4c4e9?w=800&h=600&fit=crop"
                   alt="Travel van"
                   className="w-full h-auto object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
                 <div className="absolute bottom-4 left-4 right-4">
                   <div className="bg-white/95 backdrop-blur-sm rounded-lg p-3">
                     <div className="flex items-center space-x-2">
                       <div className="flex -space-x-1">
                         {[1, 2, 3].map(i => (
-                          <div key={i} className="w-6 h-6 bg-blue-600 rounded-full border-2 border-white"></div>
+                          <div key={i} className="w-6 h-6 bg-[#1e40af] rounded-full border-2 border-white"></div>
                         ))}
                       </div>
                       <div className="text-xs text-gray-700">10,000+ penumpang</div>
@@ -167,11 +168,11 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Routes Section */}
+      {/* Routes Routes */}
       <section id="routes" className="py-12 px-5 bg-gray-50">
         <div className="max-w-6xl mx-auto">
           <div className="flex items-center justify-between mb-8">
-            <div>
+"            <div>
               <h2 className="text-2xl font-medium text-gray-900 mb-1">
                 Jadwal & Harga
               </h2>
@@ -199,9 +200,9 @@ export default function Home() {
                   <img
                     src={route.img}
                     alt={route.to}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-300"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                   <div className="absolute bottom-3 left-3 right-3">
                     <div className="text-white text-sm font-medium">{route.to}</div>
                   </div>
@@ -209,7 +210,7 @@ export default function Home() {
                 <div className="p-4">
                   <div className="flex items-center justify-between mb-2">
                     <div className="text-sm font-medium text-gray-900">{route.from}</div>
-                    <div className="text-blue-600 text-sm font-medium">{route.price}</div>
+                    <div className="text-[#1e40af] text-sm font-medium">{route.price}</div>
                   </div>
                   <div className="space-y-1 mb-3">
                     <div className="flex items-center space-x-1.5 text-gray-600 text-xs">
@@ -223,7 +224,7 @@ export default function Home() {
                     href={`https://wa.me/6285290902690?text=Halo, saya ingin pesan travel dari ${route.from} ke ${route.to}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block w-full bg-blue-600 text-white px-3 py-2 rounded-lg hover:bg-blue-700 transition text-xs text-center font-medium"
+                    className="block w-full bg-[#1e40af] text-white px-3 py-2 rounded-lg hover:bg-[#1a3596] transition text-xs text-center font-medium"
                   >
                     Pesan Sekarang
                   </a>
@@ -239,7 +240,7 @@ export default function Home() {
               {[
                 'Salatiga', 'Demak', 'Kudus', 'Boyolali', 'Jepara', 'Klaten', 'Pati', 'Purwodadi', 'Wonosobo', 'Pekalongan'
               ].map((city, i) => (
-                <div key={i} className="bg-white rounded-lg px-3 py-2 text-xs text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition text-center border border-gray-100">
+                <div key={i} className="bg-white rounded-lg px-3 py-2 text-xs text-gray-700 hover:bg-[#f0f9ff] hover:text-[#1e40af] transition text-center border border-gray-100">
                   {city}
                 </div>
               ))}
@@ -248,56 +249,59 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Fleet Section */}
-      <section id="features" className="py-12 px-5 bg-white">
+      {/* About Section */}
+      <section id="about" className="py-12 px-5 bg-white">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-8">
-            <h2 className="text-2xl font-medium text-gray-900 mb-2">
-              Armada Kami
-            </h2>
-            <p className="text-sm text-gray-600 max-w-md mx-auto">
-              Mobil terawat dan nyaman untuk perjalanan jauh
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-4">
-            {[
-              {
-                title: 'Toyota Hiace',
-                desc: 'Kapasitas 14 penumpang. Cocok untuk rombongan.',
-                img: 'https://images.unsplash.com/photo-1570125477074-5fdcf4c69875?w=400&h=300&fit=crop',
-              },
-              {
-                title: 'Toyota Avanza',
-                desc: 'Kapasitas 7 penumpang. Nyaman dan irit bahan bakar.',
-                img: 'https://images.unsplash.com/photo-1632813222983-0c234c00e226?w=400&h=300&fit=crop',
-              },
-              {
-                title: 'Toyota Innova',
-                desc: 'Kapasitas 7 penumpang. Premium dan luas.',
-                img: 'https://images.unsplash.com/photo-1552519505-6102e4b3a3fe?w=400&h=300&fit=crop',
-              },
-            ].map((vehicle, i) => (
-              <div key={i} className="bg-gray-50 rounded-xl overflow-hidden group">
-                <div className="relative h-40 overflow-hidden">
-                  <img
-                    src={vehicle.img}
-                    alt={vehicle.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-                <div className="p-4">
-                  <h3 className="text-sm font-medium text-gray-900 mb-2">{vehicle.title}</h3>
-                  <p className="text-xs text-gray-600 leading-relaxed">{vehicle.desc}</p>
-                </div>
+          <div className="grid md:grid-cols-2 gap-10 items-start">
+            <div>
+              <h2 className="text-2xl font-medium text-gray-900 mb-4">
+                Tentang Aqila Trans
+              </h2>
+              <p className="text-sm text-gray-600 mb-4 leading-relaxed">
+                Aqila Trans didirikan pada tahun 2015 oleh Mochamad Alif Prayogo. Berawal dari 1 unit Toyota Hiace, kini kami memiliki 15 armada aktif yang melayani ribuan penumpang setiap bulan.
+              </p>
+              <p className="text-sm text-gray-600 mb-4 leading-relaxed">
+                Kami berkomitmen memberikan layanan transportasi yang aman, nyaman, dan terjangkau. Setiap driver kami memiliki SIM A dan pengalaman minimal 5 tahun. Armada kami diservis rutin setiap 3 bulan.
+              </p>
+              <div className="space-y-3 mb-6">
+                {[
+                  'Didirikan: 2015',
+                  'Pemilik: Mochamad Alif Prayogo',
+                  'Lokasi: Banjarnegara, Jawa Tengah',
+                  'Armada: 15 unit aktif',
+                  'Driver: 20+ berpengalaman',
+                ].map((item, i) => (
+                  <div key={i} className="flex items-center space-x-2">
+                    <CheckCircle className="w-4 h-4 text-[#1e40af]" />
+                    <span className="text-sm text-gray-700">{item}</span>
+                  </div>
+                ))}
               </div>
-            ))}
+            </div>
+            <div className="bg-gray-50 rounded-xl p-5 border border-gray-100">
+              <h3 className="text-sm font-medium text-gray-900 mb-4">Visi Timi</h3>
+              <p className="text-sm text-gray-600 leading-relaxed mb-4">
+                Menjadi penyedia jasa transportasi terpercaya di Jawa Tengah dengan mengutamakan keselamatan, kenyamanan, dan kepuasan penumpang.
+              </p>
+              <div className="space-y-3">
+                {[
+                  { title: 'Keselamatan', desc: 'Driver berpengalaman, armada terawat' },
+                  { title: 'Kenyamanan', desc: 'Mobil bersih, AC dingin, door to door' },
+                  { title: 'Kepuasan', desc: 'Layanan ramah, respon cepat' },
+                ].map((item, i) => (
+                  <div key={i}>
+                    <div className="text-sm font-medium text-gray-900 mb-1">{item.title}</div>
+                    <p className="text-xs text-gray-600">{item.desc}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Features Section */}
-      <section className="py-12 px-5 bg-gray-50">
+      <section id="features" className="py-12 px-5 bg-gray-50">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-8">
             <h2 className="text-2xl font-medium text-gray-900 mb-2">
@@ -312,17 +316,17 @@ export default function Home() {
             {[
               {
                 title: 'Jemput & Antar',
-                desc: 'Kami jemput di alamat dan antar sampai tujuan. Tidak perlu ke terminal.',
+                desc: 'Kami jemput di alamat dan antar sampai tujuan. Tidak perlu ke terminal atau pool.',
                 icon: MapPin,
               },
               {
                 title: 'Driver Berpengalaman',
-                desc: 'Driver kami rata-rata memiliki pengalaman 5+ tahun.',
+                desc: 'Driver kami rata-rata memiliki pengalaman 5+ tahun. Mengenal rute dan kondisi jalan.',
                 icon: Users,
               },
               {
-                title: 'Jadwal Fleksibel',
-                desc: 'Travel reguler berangkat setiap hari. Charter bisa kapan saja.',
+                title: 'Jadwal Fleaibel',
+                desc: 'Travel reguler berangkat setiap hari. Charter bisa kapan saja sesuai kebutuhan Anda.',
                 icon: Calendar,
               },
               {
@@ -332,8 +336,8 @@ export default function Home() {
               },
             ].map((feature, i) => (
               <div key={i} className="bg-white rounded-xl p-5 border border-gray-100">
-                <div className="w-10 h-10 bg-blue-50 rounded-lg flex items-center justify-center mb-3">
-                  <feature.icon className="w-5 h-5 text-blue-600" />
+                <div className="w-10 h-10 bg-[#f0f9ff] rounded-lg flex items-center justify-center mb-3">
+                  <feature.icon className="w-5 h-5 text-[#1e40af]" />
                 </div>
                 <h3 className="text-sm font-medium text-gray-900 mb-2">{feature.title}</h3>
                 <p className="text-xs text-gray-600 leading-relaxed">{feature.desc}</p>
@@ -370,7 +374,7 @@ export default function Home() {
             ].map((faq, i) => (
               <div key={i} className="bg-gray-50 rounded-xl p-4 border border-gray-100">
                 <div className="flex items-start space-x-2 mb-2">
-                  <Info className="w-4 h-4 text-blue-600 mt-0.5 flex-shrink-0" />
+                  <Info className="w-4 h-4 text-[#1e40af] mt-0.5 flex-shrink-0" />
                   <h3 className="text-sm font-medium text-gray-900">{faq.q}</h3>
                 </div>
                 <p className="text-xs text-gray-600 leading-relaxed pl-6">{faq.a}</p>
@@ -381,7 +385,7 @@ export default function Home() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-12 px-5 bg-gradient-to-br from-blue-600 to-blue-800 text-white">
+      <section id="contact" className="py-12 px-5 bg-gradient-to-br from-[#1e40af] to-[#1a3596] text-white">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-10 items-start">
             <div>
@@ -429,7 +433,7 @@ export default function Home() {
                     href={`https://wa.me/6285290902690?text=Halo, saya ingin pesan travel ${route}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block bg-white text-blue-600 hover:bg-blue-50 transition rounded-lg px-4 py-2.5 text-xs font-medium"
+                    className="block bg-white text-[#1e40af] hover:bg-[#f0f9ff] transition rounded-lg px-4 py-2.5 text-xs font-medium"
                   >
                     {route}
                   </a>
@@ -446,7 +450,7 @@ export default function Home() {
           <div className="grid md:grid-cols-4 gap-6">
             <div className="md:col-span-2">
               <div className="flex items-center space-x-2 mb-3">
-                <div className="w-8 h-8 bg-gradient-to-br from-blue-600 to-blue-800 rounded-lg flex items-center justify-center">
+                <div className="w-8 h-8 bg-[#1e40af] rounded-lg flex items-center justify-center">
                   <span className="text-white font-semibold text-sm">A</span>
                 </div>
                 <div>
@@ -457,15 +461,6 @@ export default function Home() {
               <p className="text-xs text-gray-400 mb-3 max-w-md">
                 Travel reguler dan charter dengan armada Hiace, Avanza, dan Innova. Melayani door to door ke berbagai kota di Jawa Tengah.
               </p>
-              <a
-                href="https://wa.me/6285290902690"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center space-x-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition text-xs font-medium"
-              >
-                <Phone className="w-3.5 h-3.5" />
-                <span>Hubungi Kami</span>
-              </a>
             </div>
             <div>
               <h4 className="text-xs font-medium text-gray-300 mb-3">Rute Populer</h4>
