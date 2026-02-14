@@ -374,7 +374,7 @@ export default function Home() {
                   <div className="text-sm text-stone-200">Banjarnegara, Jawa Tengah</div>
                 </div>
                 <div>
-                  <div className="text-stone-400 text-xs mb-1">Jam Operasional</a>
+                  <div className="text-stone-400 text-xs mb-1">Jam Operasional</div>
                   <div className="text-sm text-stone-200">24 Jam / 7 Hari</div>
                 </div>
               </div>
